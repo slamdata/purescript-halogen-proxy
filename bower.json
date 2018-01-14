@@ -1,0 +1,21 @@
+{
+  "name": "purescript-halogen-proxy",
+  "homepage": "https://github.com/slamdata/purescript-halogen-proxy",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/slamdata/purescript-halogen-proxy.git"
+  },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "purescript-halogen": "^3.0.1"
+  }
+}
