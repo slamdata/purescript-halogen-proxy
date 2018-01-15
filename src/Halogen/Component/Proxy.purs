@@ -53,15 +53,15 @@ proxyQI
   -> H.Component HH.HTML (ProxyQ f i o) i o m
 proxyQI = proxyTrans id
 
--- | Proxies a component, hiding the left side of a coproduct query algebra
--- | but continuing to expose the right.
+-- | Proxies a component, hiding the right side of a coproduct query algebra
+-- | but continuing to expose the left.
 proxyQL
   :: forall f g i o m
    . H.Component HH.HTML (Coproduct f g) i o m
   -> H.Component HH.HTML (ProxyQ f i o) i o m
 proxyQL = proxyTrans left
 
--- | Proxies a component, hiding the right side of a coproduct query algebra
+-- | Proxies a component, hiding the left side of a coproduct query algebra
 -- | but continuing to expose the right.
 proxyQR
   :: forall f g i o m
