@@ -51,7 +51,7 @@ proxyQI
   :: forall f i o m
    . H.Component HH.HTML f i o m
   -> H.Component HH.HTML (ProxyQ f i o) i o m
-proxyQI = proxyTrans id
+proxyQI = proxyTrans identity
 
 -- | Proxies a component, hiding the right side of a coproduct query algebra
 -- | but continuing to expose the left.
@@ -94,7 +94,7 @@ proxyEval
   -> H.Component HH.HTML (ProxyQ g i o) i o m
 proxyEval evalQuery component =
   H.parentComponent
-    { initialState: id
+    { initialState: identity
     , render
     , eval
     , receiver: HE.input Receive
